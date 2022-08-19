@@ -7,7 +7,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/zyedidia/generic/rope"
+	"github.com/zendesk/generic/rope"
 )
 
 func check(r *rope.Node[byte], b *basicText, t *testing.T) {

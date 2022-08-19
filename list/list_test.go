@@ -3,7 +3,7 @@ package list_test
 import (
 	"fmt"
 
-	"github.com/zyedidia/generic/list"
+	"github.com/zendesk/generic/list"
 )
 
 func Example() {

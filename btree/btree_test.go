@@ -5,8 +5,8 @@ import (
 	"math/rand"
 	"testing"
 
-	g "github.com/zyedidia/generic"
-	"github.com/zyedidia/generic/btree"
+	g "github.com/zendesk/generic"
+	"github.com/zendesk/generic/btree"
 )
 
 func checkeq[K any, V comparable](cm *btree.Tree[K, V], get func(k K) (V, bool), t *testing.T) {

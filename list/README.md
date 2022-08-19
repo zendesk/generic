@@ -3,7 +3,7 @@
 # list
 
 ```go
-import "github.com/zyedidia/generic/list"
+import "github.com/zendesk/generic/list"
 ```
 
 Package list provides an implementation of a doubly\-linked list with a front and back\. The individual nodes of the list are publicly exposed so that the user can have fine\-grained control over the list\.
@@ -16,7 +16,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/zyedidia/generic/list"
+	"github.com/zendesk/generic/list"
 )
 
 func main() {
@@ -58,7 +58,7 @@ func main() {
   - [func (n *Node[V]) EachReverse(fn func(val V))](<#func-nodev-eachreverse>)
 
 
-## type [List](<https://github.com/zyedidia/generic/blob/master/list/list.go#L7-L9>)
+## type [List](<https://github.com/zendesk/generic/blob/master/list/list.go#L7-L9>)
 
 List implements a doubly\-linked list\.
 
@@ -68,7 +68,7 @@ type List[V any] struct {
 }
 ```
 
-### func [New](<https://github.com/zyedidia/generic/blob/master/list/list.go#L18>)
+### func [New](<https://github.com/zendesk/generic/blob/master/list/list.go#L18>)
 
 ```go
 func New[V any]() *List[V]
@@ -76,7 +76,7 @@ func New[V any]() *List[V]
 
 New returns an empty linked list\.
 
-### func \(\*List\[V\]\) [PushBack](<https://github.com/zyedidia/generic/blob/master/list/list.go#L23>)
+### func \(\*List\[V\]\) [PushBack](<https://github.com/zendesk/generic/blob/master/list/list.go#L23>)
 
 ```go
 func (l *List[V]) PushBack(v V)
@@ -84,7 +84,7 @@ func (l *List[V]) PushBack(v V)
 
 PushBack adds 'v' to the end of the list\.
 
-### func \(\*List\[V\]\) [PushBackNode](<https://github.com/zyedidia/generic/blob/master/list/list.go#L37>)
+### func \(\*List\[V\]\) [PushBackNode](<https://github.com/zendesk/generic/blob/master/list/list.go#L37>)
 
 ```go
 func (l *List[V]) PushBackNode(n *Node[V])
@@ -92,7 +92,7 @@ func (l *List[V]) PushBackNode(n *Node[V])
 
 PushBackNode adds the node 'n' to the back of the list\.
 
-### func \(\*List\[V\]\) [PushFront](<https://github.com/zyedidia/generic/blob/master/list/list.go#L30>)
+### func \(\*List\[V\]\) [PushFront](<https://github.com/zendesk/generic/blob/master/list/list.go#L30>)
 
 ```go
 func (l *List[V]) PushFront(v V)
@@ -100,7 +100,7 @@ func (l *List[V]) PushFront(v V)
 
 PushFront adds 'v' to the beginning of the list\.
 
-### func \(\*List\[V\]\) [PushFrontNode](<https://github.com/zyedidia/generic/blob/master/list/list.go#L49>)
+### func \(\*List\[V\]\) [PushFrontNode](<https://github.com/zendesk/generic/blob/master/list/list.go#L49>)
 
 ```go
 func (l *List[V]) PushFrontNode(n *Node[V])
@@ -108,7 +108,7 @@ func (l *List[V]) PushFrontNode(n *Node[V])
 
 PushFrontNode adds the node 'n' to the front of the list\.
 
-### func \(\*List\[V\]\) [Remove](<https://github.com/zyedidia/generic/blob/master/list/list.go#L61>)
+### func \(\*List\[V\]\) [Remove](<https://github.com/zendesk/generic/blob/master/list/list.go#L61>)
 
 ```go
 func (l *List[V]) Remove(n *Node[V])
@@ -116,7 +116,7 @@ func (l *List[V]) Remove(n *Node[V])
 
 Remove removes the node 'n' from the list\.
 
-## type [Node](<https://github.com/zyedidia/generic/blob/master/list/list.go#L12-L15>)
+## type [Node](<https://github.com/zendesk/generic/blob/master/list/list.go#L12-L15>)
 
 Node is a node in the linked list\.
 
@@ -127,7 +127,7 @@ type Node[V any] struct {
 }
 ```
 
-### func \(\*Node\[V\]\) [Each](<https://github.com/zyedidia/generic/blob/master/list/list.go#L75>)
+### func \(\*Node\[V\]\) [Each](<https://github.com/zendesk/generic/blob/master/list/list.go#L75>)
 
 ```go
 func (n *Node[V]) Each(fn func(val V))
@@ -135,7 +135,7 @@ func (n *Node[V]) Each(fn func(val V))
 
 Each calls 'fn' on every element from this node onward in the list\.
 
-### func \(\*Node\[V\]\) [EachReverse](<https://github.com/zyedidia/generic/blob/master/list/list.go#L84>)
+### func \(\*Node\[V\]\) [EachReverse](<https://github.com/zendesk/generic/blob/master/list/list.go#L84>)
 
 ```go
 func (n *Node[V]) EachReverse(fn func(val V))

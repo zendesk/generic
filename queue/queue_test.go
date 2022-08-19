@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/zyedidia/generic/list"
+	"github.com/zendesk/generic/list"
 )
 
 func TestQueueEmpty(t *testing.T) {

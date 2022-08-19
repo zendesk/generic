@@ -5,7 +5,7 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/zyedidia/generic"
+	"github.com/zendesk/generic"
 )
 
 func ExampleSet_ConstUnion() {

@@ -5,7 +5,7 @@
 package avl
 
 import (
-	g "github.com/zyedidia/generic"
+	g "github.com/zendesk/generic"
 )
 
 // Tree implements an AVL tree.

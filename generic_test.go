@@ -5,7 +5,7 @@ import (
 	"math"
 	"time"
 
-	"github.com/zyedidia/generic"
+	"github.com/zendesk/generic"
 )
 
 func ExampleMax() {

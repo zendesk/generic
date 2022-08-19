@@ -17,7 +17,7 @@
 package interval
 
 import (
-	g "github.com/zyedidia/generic"
+	g "github.com/zendesk/generic"
 )
 
 type KV[V any] struct {

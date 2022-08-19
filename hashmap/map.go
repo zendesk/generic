@@ -7,7 +7,7 @@
 package hashmap
 
 import (
-	g "github.com/zyedidia/generic"
+	g "github.com/zendesk/generic"
 )
 
 type entry[K, V any] struct {

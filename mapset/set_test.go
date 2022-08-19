@@ -5,7 +5,7 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/zyedidia/generic/mapset"
+	"github.com/zendesk/generic/mapset"
 )
 
 func checkeq[K comparable](set mapset.Set[K], get func(k K) bool, t *testing.T) {

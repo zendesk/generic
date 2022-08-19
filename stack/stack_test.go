@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/zyedidia/generic/stack"
+	"github.com/zendesk/generic/stack"
 )
 
 func assert(t *testing.T, fn func() bool) {

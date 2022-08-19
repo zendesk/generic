@@ -5,8 +5,8 @@ import (
 	"math/rand"
 	"testing"
 
-	g "github.com/zyedidia/generic"
-	"github.com/zyedidia/generic/hashset"
+	g "github.com/zendesk/generic"
+	"github.com/zendesk/generic/hashset"
 )
 
 func checkeq[K any](set *hashset.Set[K], get func(k K) bool, t *testing.T) {

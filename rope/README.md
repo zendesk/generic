@@ -3,7 +3,7 @@
 # rope
 
 ```go
-import "github.com/zyedidia/generic/rope"
+import "github.com/zendesk/generic/rope"
 ```
 
 Package rope provides an implementation of a rope data structure\. A rope provides the same interface as an array\, but supports efficient insertion and deletion from the middle of the array\. It is implemented as an augmented binary search tree\. The rope supports the following operations\, where 'n' is the number of elements in the rope:
@@ -26,7 +26,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/zyedidia/generic/rope"
+	"github.com/zendesk/generic/rope"
 )
 
 func main() {
@@ -85,7 +85,7 @@ var (
 )
 ```
 
-## type [Node](<https://github.com/zyedidia/generic/blob/master/rope/rope.go#L45-L50>)
+## type [Node](<https://github.com/zendesk/generic/blob/master/rope/rope.go#L45-L50>)
 
 A Node in the rope structure\. If the kind is tLeaf\, only the value and length are valid\, and if the kind is tNode\, only length\, left\, right are valid\.
 
@@ -95,7 +95,7 @@ type Node[V any] struct {
 }
 ```
 
-### func [Join](<https://github.com/zyedidia/generic/blob/master/rope/rope.go#L222>)
+### func [Join](<https://github.com/zendesk/generic/blob/master/rope/rope.go#L222>)
 
 ```go
 func Join[V any](a, b *Node[V], more ...*Node[V]) *Node[V]
@@ -103,7 +103,7 @@ func Join[V any](a, b *Node[V], more ...*Node[V]) *Node[V]
 
 Join merges all the given ropes together into one rope\.
 
-### func [New](<https://github.com/zyedidia/generic/blob/master/rope/rope.go#L55>)
+### func [New](<https://github.com/zendesk/generic/blob/master/rope/rope.go#L55>)
 
 ```go
 func New[V any](b []V) *Node[V]
@@ -111,7 +111,7 @@ func New[V any](b []V) *Node[V]
 
 New returns a new rope node from the given byte slice\. The underlying data is not copied so the user should ensure that it is okay to insert and delete from the input slice\.
 
-### func \(\*Node\[V\]\) [At](<https://github.com/zyedidia/generic/blob/master/rope/rope.go#L185>)
+### func \(\*Node\[V\]\) [At](<https://github.com/zendesk/generic/blob/master/rope/rope.go#L185>)
 
 ```go
 func (n *Node[V]) At(pos int) V
@@ -119,7 +119,7 @@ func (n *Node[V]) At(pos int) V
 
 At returns the element at the given position\.
 
-### func \(\*Node\[V\]\) [Each](<https://github.com/zyedidia/generic/blob/master/rope/rope.go#L257>)
+### func \(\*Node\[V\]\) [Each](<https://github.com/zendesk/generic/blob/master/rope/rope.go#L257>)
 
 ```go
 func (n *Node[V]) Each(fn func(n *Node[V]))
@@ -127,7 +127,7 @@ func (n *Node[V]) Each(fn func(n *Node[V]))
 
 Each applies the given function to every leaf node in order\.
 
-### func \(\*Node\[V\]\) [Insert](<https://github.com/zyedidia/generic/blob/master/rope/rope.go#L131>)
+### func \(\*Node\[V\]\) [Insert](<https://github.com/zendesk/generic/blob/master/rope/rope.go#L131>)
 
 ```go
 func (n *Node[V]) Insert(pos int, value []V)
@@ -135,7 +135,7 @@ func (n *Node[V]) Insert(pos int, value []V)
 
 Insert inserts the given value at pos\.
 
-### func \(\*Node\[V\]\) [Len](<https://github.com/zyedidia/generic/blob/master/rope/rope.go#L66>)
+### func \(\*Node\[V\]\) [Len](<https://github.com/zendesk/generic/blob/master/rope/rope.go#L66>)
 
 ```go
 func (n *Node[V]) Len() int
@@ -143,7 +143,7 @@ func (n *Node[V]) Len() int
 
 Len returns the number of elements stored in the rope\.
 
-### func \(\*Node\[V\]\) [Rebalance](<https://github.com/zyedidia/generic/blob/master/rope/rope.go#L242>)
+### func \(\*Node\[V\]\) [Rebalance](<https://github.com/zendesk/generic/blob/master/rope/rope.go#L242>)
 
 ```go
 func (n *Node[V]) Rebalance()
@@ -151,7 +151,7 @@ func (n *Node[V]) Rebalance()
 
 Rebalance finds unbalanced nodes and rebuilds them\.
 
-### func \(\*Node\[V\]\) [Rebuild](<https://github.com/zyedidia/generic/blob/master/rope/rope.go#L231>)
+### func \(\*Node\[V\]\) [Rebuild](<https://github.com/zendesk/generic/blob/master/rope/rope.go#L231>)
 
 ```go
 func (n *Node[V]) Rebuild()
@@ -159,7 +159,7 @@ func (n *Node[V]) Rebuild()
 
 Rebuild rebuilds the entire rope structure\, resulting in a balanced tree\.
 
-### func \(\*Node\[V\]\) [Remove](<https://github.com/zyedidia/generic/blob/master/rope/rope.go#L106>)
+### func \(\*Node\[V\]\) [Remove](<https://github.com/zendesk/generic/blob/master/rope/rope.go#L106>)
 
 ```go
 func (n *Node[V]) Remove(start, end int)
@@ -167,7 +167,7 @@ func (n *Node[V]) Remove(start, end int)
 
 Remove deletes the range \[start:end\) \(exclusive bound\) from the rope\.
 
-### func \(\*Node\[V\]\) [Slice](<https://github.com/zyedidia/generic/blob/master/rope/rope.go#L151>)
+### func \(\*Node\[V\]\) [Slice](<https://github.com/zendesk/generic/blob/master/rope/rope.go#L151>)
 
 ```go
 func (n *Node[V]) Slice(start, end int) []V
@@ -175,7 +175,7 @@ func (n *Node[V]) Slice(start, end int) []V
 
 Slice returns the range of the rope from \[start:end\)\. The returned slice is not copied\.
 
-### func \(\*Node\[V\]\) [SplitAt](<https://github.com/zyedidia/generic/blob/master/rope/rope.go#L192>)
+### func \(\*Node\[V\]\) [SplitAt](<https://github.com/zendesk/generic/blob/master/rope/rope.go#L192>)
 
 ```go
 func (n *Node[V]) SplitAt(i int) (*Node[V], *Node[V])
@@ -183,7 +183,7 @@ func (n *Node[V]) SplitAt(i int) (*Node[V], *Node[V])
 
 SplitAt splits the node at the given index and returns two new ropes corresponding to the left and right portions of the split\.
 
-### func \(\*Node\[V\]\) [Value](<https://github.com/zyedidia/generic/blob/master/rope/rope.go#L95>)
+### func \(\*Node\[V\]\) [Value](<https://github.com/zendesk/generic/blob/master/rope/rope.go#L95>)
 
 ```go
 func (n *Node[V]) Value() []V

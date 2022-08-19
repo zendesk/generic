@@ -2,8 +2,8 @@
 package hashset
 
 import (
-	g "github.com/zyedidia/generic"
-	"github.com/zyedidia/generic/hashmap"
+	g "github.com/zendesk/generic"
+	"github.com/zendesk/generic/hashmap"
 )
 
 // Set implements a hashset, using the hashmap as the underlying storage.

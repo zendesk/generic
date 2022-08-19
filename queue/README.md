@@ -3,7 +3,7 @@
 # queue
 
 ```go
-import "github.com/zyedidia/generic/queue"
+import "github.com/zendesk/generic/queue"
 ```
 
 Package queue provides an implementation of a First In First Out \(FIFO\) queue\. The FIFO queue is implemented using the doubly\-linked list from the 'list' package\.
@@ -145,7 +145,7 @@ false
   - [func (q *Queue[T]) Peek() T](<#func-queuet-peek>)
 
 
-## type [Queue](<https://github.com/zyedidia/generic/blob/master/queue/queue.go#L11-L13>)
+## type [Queue](<https://github.com/zendesk/generic/blob/master/queue/queue.go#L11-L13>)
 
 Queue is a simple First In First Out \(FIFO\) queue\.
 
@@ -155,7 +155,7 @@ type Queue[T any] struct {
 }
 ```
 
-### func [New](<https://github.com/zyedidia/generic/blob/master/queue/queue.go#L16>)
+### func [New](<https://github.com/zendesk/generic/blob/master/queue/queue.go#L16>)
 
 ```go
 func New[T any]() *Queue[T]
@@ -163,7 +163,7 @@ func New[T any]() *Queue[T]
 
 New returns an empty First In First Out \(FIFO\) queue\.
 
-### func \(\*Queue\[T\]\) [Dequeue](<https://github.com/zyedidia/generic/blob/master/queue/queue.go#L30>)
+### func \(\*Queue\[T\]\) [Dequeue](<https://github.com/zendesk/generic/blob/master/queue/queue.go#L30>)
 
 ```go
 func (q *Queue[T]) Dequeue() T
@@ -173,7 +173,7 @@ Dequeue removes and returns the item at the front of the queue\.
 
 A panic occurs if the queue is Empty\.
 
-### func \(\*Queue\[T\]\) [Each](<https://github.com/zyedidia/generic/blob/master/queue/queue.go#L51>)
+### func \(\*Queue\[T\]\) [Each](<https://github.com/zendesk/generic/blob/master/queue/queue.go#L51>)
 
 ```go
 func (q *Queue[T]) Each(fn func(t T))
@@ -181,7 +181,7 @@ func (q *Queue[T]) Each(fn func(t T))
 
 Each calls 'fn' on every item in the queue\, starting with the least recently pushed element\.
 
-### func \(\*Queue\[T\]\) [Empty](<https://github.com/zyedidia/generic/blob/master/queue/queue.go#L45>)
+### func \(\*Queue\[T\]\) [Empty](<https://github.com/zendesk/generic/blob/master/queue/queue.go#L45>)
 
 ```go
 func (q *Queue[T]) Empty() bool
@@ -189,7 +189,7 @@ func (q *Queue[T]) Empty() bool
 
 Empty returns true if the queue is empty\.
 
-### func \(\*Queue\[T\]\) [Enqueue](<https://github.com/zyedidia/generic/blob/master/queue/queue.go#L23>)
+### func \(\*Queue\[T\]\) [Enqueue](<https://github.com/zendesk/generic/blob/master/queue/queue.go#L23>)
 
 ```go
 func (q *Queue[T]) Enqueue(value T)
@@ -197,7 +197,7 @@ func (q *Queue[T]) Enqueue(value T)
 
 Enqueue inserts 'value' to the end of the queue\.
 
-### func \(\*Queue\[T\]\) [Peek](<https://github.com/zyedidia/generic/blob/master/queue/queue.go#L40>)
+### func \(\*Queue\[T\]\) [Peek](<https://github.com/zendesk/generic/blob/master/queue/queue.go#L40>)
 
 ```go
 func (q *Queue[T]) Peek() T

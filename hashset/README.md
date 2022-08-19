@@ -3,7 +3,7 @@
 # hashset
 
 ```go
-import "github.com/zyedidia/generic/hashset"
+import "github.com/zendesk/generic/hashset"
 ```
 
 Package hashset provides an implementation of a hashset\.
@@ -16,8 +16,8 @@ package main
 
 import (
 	"fmt"
-	g "github.com/zyedidia/generic"
-	"github.com/zyedidia/generic/hashset"
+	g "github.com/zendesk/generic"
+	"github.com/zendesk/generic/hashset"
 )
 
 func main() {
@@ -53,7 +53,7 @@ false
   - [func (s *Set[K]) Size() int](<#func-setk-size>)
 
 
-## type [Set](<https://github.com/zyedidia/generic/blob/master/hashset/set.go#L10-L12>)
+## type [Set](<https://github.com/zendesk/generic/blob/master/hashset/set.go#L10-L12>)
 
 Set implements a hashset\, using the hashmap as the underlying storage\.
 
@@ -63,7 +63,7 @@ type Set[K any] struct {
 }
 ```
 
-### func [New](<https://github.com/zyedidia/generic/blob/master/hashset/set.go#L15>)
+### func [New](<https://github.com/zendesk/generic/blob/master/hashset/set.go#L15>)
 
 ```go
 func New[K any](capacity uint64, equals g.EqualsFn[K], hash g.HashFn[K]) *Set[K]
@@ -71,7 +71,7 @@ func New[K any](capacity uint64, equals g.EqualsFn[K], hash g.HashFn[K]) *Set[K]
 
 New returns an empty hashset\.
 
-### func \(\*Set\[K\]\) [Copy](<https://github.com/zyedidia/generic/blob/master/hashset/set.go#L50>)
+### func \(\*Set\[K\]\) [Copy](<https://github.com/zendesk/generic/blob/master/hashset/set.go#L50>)
 
 ```go
 func (s *Set[K]) Copy() *Set[K]
@@ -79,7 +79,7 @@ func (s *Set[K]) Copy() *Set[K]
 
 Copy returns a copy of this set\.
 
-### func \(\*Set\[K\]\) [Each](<https://github.com/zyedidia/generic/blob/master/hashset/set.go#L43>)
+### func \(\*Set\[K\]\) [Each](<https://github.com/zendesk/generic/blob/master/hashset/set.go#L43>)
 
 ```go
 func (s *Set[K]) Each(fn func(key K))
@@ -87,7 +87,7 @@ func (s *Set[K]) Each(fn func(key K))
 
 Each calls 'fn' on every item in the set in no particular order\.
 
-### func \(\*Set\[K\]\) [Has](<https://github.com/zyedidia/generic/blob/master/hashset/set.go#L27>)
+### func \(\*Set\[K\]\) [Has](<https://github.com/zendesk/generic/blob/master/hashset/set.go#L27>)
 
 ```go
 func (s *Set[K]) Has(val K) bool
@@ -95,7 +95,7 @@ func (s *Set[K]) Has(val K) bool
 
 Has returns true only if 'val' is in the set\.
 
-### func \(\*Set\[K\]\) [Put](<https://github.com/zyedidia/generic/blob/master/hashset/set.go#L22>)
+### func \(\*Set\[K\]\) [Put](<https://github.com/zendesk/generic/blob/master/hashset/set.go#L22>)
 
 ```go
 func (s *Set[K]) Put(val K)
@@ -103,7 +103,7 @@ func (s *Set[K]) Put(val K)
 
 Put adds 'val' to the set\.
 
-### func \(\*Set\[K\]\) [Remove](<https://github.com/zyedidia/generic/blob/master/hashset/set.go#L33>)
+### func \(\*Set\[K\]\) [Remove](<https://github.com/zendesk/generic/blob/master/hashset/set.go#L33>)
 
 ```go
 func (s *Set[K]) Remove(val K)
@@ -111,7 +111,7 @@ func (s *Set[K]) Remove(val K)
 
 Remove removes 'val' from the set\.
 
-### func \(\*Set\[K\]\) [Size](<https://github.com/zyedidia/generic/blob/master/hashset/set.go#L38>)
+### func \(\*Set\[K\]\) [Size](<https://github.com/zendesk/generic/blob/master/hashset/set.go#L38>)
 
 ```go
 func (s *Set[K]) Size() int

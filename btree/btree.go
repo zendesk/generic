@@ -5,7 +5,7 @@
 package btree
 
 import (
-	g "github.com/zyedidia/generic"
+	g "github.com/zendesk/generic"
 )
 
 const maxChildren = 64 // must be even and > 2

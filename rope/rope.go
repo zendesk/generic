@@ -18,7 +18,7 @@
 // case, which is often unacceptable.
 package rope
 
-import g "github.com/zyedidia/generic"
+import g "github.com/zendesk/generic"
 
 var (
 	// SplitLength is the threshold above which slices will be split into

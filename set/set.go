@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/zyedidia/generic"
-	"github.com/zyedidia/generic/hashset"
-	"github.com/zyedidia/generic/mapset"
+	"github.com/zendesk/generic"
+	"github.com/zendesk/generic/hashset"
+	"github.com/zendesk/generic/mapset"
 )
 
 func NewMapset[K comparable](in ...K) Set[K] {

@@ -5,8 +5,8 @@ import (
 	"math/rand"
 	"testing"
 
-	g "github.com/zyedidia/generic"
-	"github.com/zyedidia/generic/hashmap"
+	g "github.com/zendesk/generic"
+	"github.com/zendesk/generic/hashmap"
 )
 
 func checkeq[K any, V comparable](cm *hashmap.Map[K, V], get func(k K) (V, bool), t *testing.T) {

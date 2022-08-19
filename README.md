@@ -1,7 +1,7 @@
 # Generic Data Structures
 
-[![Go Reference](https://pkg.go.dev/badge/github.com/zyedidia/generic.svg)](https://pkg.go.dev/github.com/zyedidia/generic)
-[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/zyedidia/generic/blob/master/LICENSE)
+[![Go Reference](https://pkg.go.dev/badge/github.com/zendesk/generic.svg)](https://pkg.go.dev/github.com/zendesk/generic)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/zendesk/generic/blob/master/LICENSE)
 
 This package implements some generic data structures.
 

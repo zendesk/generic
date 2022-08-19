@@ -4,7 +4,7 @@
 package queue
 
 import (
-	"github.com/zyedidia/generic/list"
+	"github.com/zendesk/generic/list"
 )
 
 // Queue is a simple First In First Out (FIFO) queue.

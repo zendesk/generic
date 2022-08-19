@@ -5,7 +5,7 @@
 package cache
 
 import (
-	"github.com/zyedidia/generic/list"
+	"github.com/zendesk/generic/list"
 )
 
 // A Cache is an LRU cache for keys and values. Each entry is

@@ -3,7 +3,7 @@ package cache_test
 import (
 	"fmt"
 
-	"github.com/zyedidia/generic/cache"
+	"github.com/zendesk/generic/cache"
 )
 
 func Example() {

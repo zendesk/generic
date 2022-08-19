@@ -3,7 +3,7 @@
 # generic
 
 ```go
-import "github.com/zyedidia/generic"
+import "github.com/zendesk/generic"
 ```
 
 ## Index
@@ -34,7 +34,7 @@ import "github.com/zyedidia/generic"
 - [type LessFn](<#type-lessfn>)
 
 
-## func [Clamp](<https://github.com/zyedidia/generic/blob/master/generic.go#L62>)
+## func [Clamp](<https://github.com/zendesk/generic/blob/master/generic.go#L62>)
 
 ```go
 func Clamp[T constraints.Ordered](x, lo, hi T) T
@@ -50,7 +50,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/zyedidia/generic"
+	"github.com/zendesk/generic"
 	"time"
 )
 
@@ -85,7 +85,7 @@ func main() {
 </p>
 </details>
 
-## func [ClampFunc](<https://github.com/zyedidia/generic/blob/master/generic.go#L84>)
+## func [ClampFunc](<https://github.com/zendesk/generic/blob/master/generic.go#L84>)
 
 ```go
 func ClampFunc[T constraints.Ordered](x, lo, hi T, less LessFn[T]) T
@@ -93,7 +93,7 @@ func ClampFunc[T constraints.Ordered](x, lo, hi T, less LessFn[T]) T
 
 ClampFunc returns x constrained within \[lo:hi\] range using the less func\. If x compares less than lo\, returns lo; otherwise if hi compares less than x\, returns hi; otherwise returns v\.
 
-## func [Compare](<https://github.com/zyedidia/generic/blob/master/generic.go#L35>)
+## func [Compare](<https://github.com/zendesk/generic/blob/master/generic.go#L35>)
 
 ```go
 func Compare[T any](a, b T, less LessFn[T]) int
@@ -107,7 +107,7 @@ Compare uses a less function to determine the ordering of 'a' and 'b'\. It retur
 
 \* 0 if a == b
 
-## func [Equals](<https://github.com/zyedidia/generic/blob/master/generic.go#L19>)
+## func [Equals](<https://github.com/zendesk/generic/blob/master/generic.go#L19>)
 
 ```go
 func Equals[T comparable](a, b T) bool
@@ -115,79 +115,79 @@ func Equals[T comparable](a, b T) bool
 
 Equals wraps the '==' operator for comparable types\.
 
-## func [HashBytes](<https://github.com/zyedidia/generic/blob/master/generic.go#L121>)
+## func [HashBytes](<https://github.com/zendesk/generic/blob/master/generic.go#L121>)
 
 ```go
 func HashBytes(b []byte) uint64
 ```
 
-## func [HashInt](<https://github.com/zyedidia/generic/blob/master/generic.go#L112>)
+## func [HashInt](<https://github.com/zendesk/generic/blob/master/generic.go#L112>)
 
 ```go
 func HashInt(i int) uint64
 ```
 
-## func [HashInt16](<https://github.com/zyedidia/generic/blob/master/generic.go#L106>)
+## func [HashInt16](<https://github.com/zendesk/generic/blob/master/generic.go#L106>)
 
 ```go
 func HashInt16(i int16) uint64
 ```
 
-## func [HashInt32](<https://github.com/zyedidia/generic/blob/master/generic.go#L103>)
+## func [HashInt32](<https://github.com/zendesk/generic/blob/master/generic.go#L103>)
 
 ```go
 func HashInt32(i int32) uint64
 ```
 
-## func [HashInt64](<https://github.com/zyedidia/generic/blob/master/generic.go#L100>)
+## func [HashInt64](<https://github.com/zendesk/generic/blob/master/generic.go#L100>)
 
 ```go
 func HashInt64(i int64) uint64
 ```
 
-## func [HashInt8](<https://github.com/zyedidia/generic/blob/master/generic.go#L109>)
+## func [HashInt8](<https://github.com/zendesk/generic/blob/master/generic.go#L109>)
 
 ```go
 func HashInt8(i int8) uint64
 ```
 
-## func [HashString](<https://github.com/zyedidia/generic/blob/master/generic.go#L118>)
+## func [HashString](<https://github.com/zendesk/generic/blob/master/generic.go#L118>)
 
 ```go
 func HashString(s string) uint64
 ```
 
-## func [HashUint](<https://github.com/zyedidia/generic/blob/master/generic.go#L115>)
+## func [HashUint](<https://github.com/zendesk/generic/blob/master/generic.go#L115>)
 
 ```go
 func HashUint(i uint) uint64
 ```
 
-## func [HashUint16](<https://github.com/zyedidia/generic/blob/master/generic.go#L94>)
+## func [HashUint16](<https://github.com/zendesk/generic/blob/master/generic.go#L94>)
 
 ```go
 func HashUint16(u uint16) uint64
 ```
 
-## func [HashUint32](<https://github.com/zyedidia/generic/blob/master/generic.go#L91>)
+## func [HashUint32](<https://github.com/zendesk/generic/blob/master/generic.go#L91>)
 
 ```go
 func HashUint32(u uint32) uint64
 ```
 
-## func [HashUint64](<https://github.com/zyedidia/generic/blob/master/generic.go#L88>)
+## func [HashUint64](<https://github.com/zendesk/generic/blob/master/generic.go#L88>)
 
 ```go
 func HashUint64(u uint64) uint64
 ```
 
-## func [HashUint8](<https://github.com/zyedidia/generic/blob/master/generic.go#L97>)
+## func [HashUint8](<https://github.com/zendesk/generic/blob/master/generic.go#L97>)
 
 ```go
 func HashUint8(u uint8) uint64
 ```
 
-## func [Less](<https://github.com/zyedidia/generic/blob/master/generic.go#L24>)
+## func [Less](<https://github.com/zendesk/generic/blob/master/generic.go#L24>)
 
 ```go
 func Less[T constraints.Ordered](a, b T) bool
@@ -195,7 +195,7 @@ func Less[T constraints.Ordered](a, b T) bool
 
 Less wraps the '\<' operator for ordered types\.
 
-## func [Max](<https://github.com/zyedidia/generic/blob/master/generic.go#L45>)
+## func [Max](<https://github.com/zendesk/generic/blob/master/generic.go#L45>)
 
 ```go
 func Max[T constraints.Ordered](a, b T) T
@@ -211,7 +211,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/zyedidia/generic"
+	"github.com/zendesk/generic"
 	"time"
 )
 
@@ -231,7 +231,7 @@ func main() {
 </p>
 </details>
 
-## func [MaxFunc](<https://github.com/zyedidia/generic/blob/master/generic.go#L67>)
+## func [MaxFunc](<https://github.com/zendesk/generic/blob/master/generic.go#L67>)
 
 ```go
 func MaxFunc[T any](a, b T, less LessFn[T]) T
@@ -247,7 +247,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/zyedidia/generic"
+	"github.com/zendesk/generic"
 	"math"
 )
 
@@ -268,7 +268,7 @@ func main() {
 </p>
 </details>
 
-## func [Min](<https://github.com/zyedidia/generic/blob/master/generic.go#L53>)
+## func [Min](<https://github.com/zendesk/generic/blob/master/generic.go#L53>)
 
 ```go
 func Min[T constraints.Ordered](a, b T) T
@@ -284,7 +284,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/zyedidia/generic"
+	"github.com/zendesk/generic"
 	"time"
 )
 
@@ -304,7 +304,7 @@ func main() {
 </p>
 </details>
 
-## func [MinFunc](<https://github.com/zyedidia/generic/blob/master/generic.go#L75>)
+## func [MinFunc](<https://github.com/zendesk/generic/blob/master/generic.go#L75>)
 
 ```go
 func MinFunc[T any](a, b T, less LessFn[T]) T
@@ -320,7 +320,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/zyedidia/generic"
+	"github.com/zendesk/generic"
 	"math"
 )
 
@@ -341,7 +341,7 @@ func main() {
 </p>
 </details>
 
-## type [EqualsFn](<https://github.com/zyedidia/generic/blob/master/generic.go#L10>)
+## type [EqualsFn](<https://github.com/zendesk/generic/blob/master/generic.go#L10>)
 
 EqualsFn is a function that returns whether 'a' and 'b' are equal\.
 
@@ -349,7 +349,7 @@ EqualsFn is a function that returns whether 'a' and 'b' are equal\.
 type EqualsFn[T any] func(a, b T) bool
 ```
 
-## type [HashFn](<https://github.com/zyedidia/generic/blob/master/generic.go#L16>)
+## type [HashFn](<https://github.com/zendesk/generic/blob/master/generic.go#L16>)
 
 HashFn is a function that returns the hash of 't'\.
 
@@ -357,7 +357,7 @@ HashFn is a function that returns the hash of 't'\.
 type HashFn[T any] func(t T) uint64
 ```
 
-## type [LessFn](<https://github.com/zyedidia/generic/blob/master/generic.go#L13>)
+## type [LessFn](<https://github.com/zendesk/generic/blob/master/generic.go#L13>)
 
 LessFn is a function that returns whether 'a' is less than 'b'\.
 

@@ -5,8 +5,8 @@ import (
 	"math/rand"
 	"testing"
 
-	g "github.com/zyedidia/generic"
-	"github.com/zyedidia/generic/avl"
+	g "github.com/zendesk/generic"
+	"github.com/zendesk/generic/avl"
 )
 
 func checkeq[K any, V comparable](cm *avl.Tree[K, V], n int, get func(k K) (V, bool), t *testing.T) {
